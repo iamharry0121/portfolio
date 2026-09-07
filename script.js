@@ -1,37 +1,164 @@
-const windowBox = document.getElementById("intro");
-const titleBar = document.getElementById("top_bar");
+/* =========================
+   WINDOW STATE
+   ========================= */
 
-let dragging = false;
+let activeWindow = null;
+
 let offsetX = 0;
 let offsetY = 0;
 
 
-titleBar.addEventListener("mousedown", (event) => {
+/* =========================
+   Z-INDEX
+   ========================= */
 
-    dragging = true;
-
-    const rect = windowBox.getBoundingClientRect();
-
-    offsetX = event.clientX - rect.left;
-    offsetY = event.clientY - rect.top;
-
-});
+let highestZIndex = 1;
 
 
-document.addEventListener("mousemove", (event) => {
+/* =========================
+   OPEN WINDOW
+   ========================= */
 
-    if (!dragging) return;
+function openWindow(id) {
 
-    windowBox.style.left = `${event.clientX - offsetX}px`;
-    windowBox.style.top = `${event.clientY - offsetY}px`;
+    const windowBox =
+        document.getElementById(id);
 
-    windowBox.style.transform = "none";
+    windowBox.style.display = "block";
 
-});
+    bringToFront(windowBox);
+}
 
 
-document.addEventListener("mouseup", () => {
+/* =========================
+   CLOSE WINDOW
+   ========================= */
 
-    dragging = false;
+function closeWindow(id) {
 
-});
+    const windowBox =
+        document.getElementById(id);
+
+    windowBox.style.display = "none";
+}
+
+
+/* =========================
+   MINIMIZE WINDOW
+   ========================= */
+
+function minimizeWindow(id) {
+
+    const windowBox =
+        document.getElementById(id);
+
+    windowBox.style.display = "none";
+}
+
+
+/* =========================
+   BRING WINDOW TO FRONT
+   ========================= */
+
+function bringToFront(windowBox) {
+
+    highestZIndex++;
+
+    windowBox.style.zIndex =
+        highestZIndex;
+}
+
+
+/* =========================
+   MAKE WINDOWS DRAGGABLE
+   ========================= */
+
+document
+    .querySelectorAll(".top_bar")
+    .forEach(titleBar => {
+
+        titleBar.addEventListener(
+            "mousedown",
+            (event) => {
+
+                const windowBox =
+                    titleBar.parentElement;
+
+                /*
+                 * Don't start dragging when
+                 * clicking a window button.
+                 */
+
+                if (
+                    event.target.tagName ===
+                    "BUTTON"
+                ) {
+                    return;
+                }
+
+
+                bringToFront(windowBox);
+
+                activeWindow = windowBox;
+
+
+                const rect =
+                    windowBox.getBoundingClientRect();
+
+
+                offsetX =
+                    event.clientX - rect.left;
+
+                offsetY =
+                    event.clientY - rect.top;
+
+
+                /*
+                 * Remove the initial
+                 * centering transform.
+                 */
+
+                windowBox.style.transform =
+                    "none";
+
+            }
+        );
+
+    });
+
+
+/* =========================
+   DRAGGING
+   ========================= */
+
+document.addEventListener(
+    "mousemove",
+    (event) => {
+
+        if (!activeWindow) {
+            return;
+        }
+
+
+        activeWindow.style.left =
+            `${event.clientX - offsetX}px`;
+
+        activeWindow.style.top =
+            `${event.clientY - offsetY}px`;
+
+    }
+);
+
+
+/* =========================
+   STOP DRAGGING
+   ========================= */
+
+document.addEventListener(
+    "mouseup",
+    () => {
+
+        activeWindow = null;
+
+    }
+);

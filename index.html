@@ -1,40 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>My Portfolio</title>
+    <title>Harry's Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div id="intro">
+    <!-- =========================
+         DESKTOP
+         ========================= -->
 
-        <div id="top_bar">
+    <div id="desktop">
 
-            <div id="window_title">
-                My Portfolio
+        <!-- ABOUT ME ICON -->
+
+        <div class="desktop_icon"
+             onclick="openWindow('about_window')">
+
+            <div class="icon_image">
+                👤
             </div>
 
-            <div id="window_buttons">
-                <button id="minimize">−</button>
-                <button id="maximize">□</button>
-                <button id="close">×</button>
+            <div class="icon_name">
+                About Me
             </div>
 
         </div>
 
 
-        <div id="content">
+        <!-- PROJECTS ICON -->
 
-            <h1 id="name">harry</h1>
+        <div class="desktop_icon"
+             onclick="openWindow('projects_window')">
 
-            <p>
-                Welcome to my portfolio.
-            </p>
+            <div class="icon_image">
+                📁
+            </div>
+
+            <div class="icon_name">
+                Projects
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             ABOUT ME WINDOW
+             ========================= -->
+
+        <div class="window" id="about_window">
+
+            <div class="top_bar">
+
+                <div class="window_title">
+                    About Me
+                </div>
+
+                <div class="window_buttons">
+
+                    <button onclick="minimizeWindow('about_window')">
+                        −
+                    </button>
+
+                    <button>
+                        □
+                    </button>
+
+                    <button onclick="closeWindow('about_window')">
+                        ×
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="window_content">
+
+                <h1>Hey, I'm Harry.</h1>
+
+                <p>
+                    I'm a student interested in computer science,
+                    programming, artificial intelligence, and
+                    technology.
+                </p>
+
+                <p>
+                    I enjoy building things, experimenting with
+                    code, and learning how computers actually work.
+                </p>
+
+                <hr>
+
+                <h2>Interests</h2>
+
+                <ul>
+                    <li>Computer Science</li>
+                    <li>Artificial Intelligence</li>
+                    <li>Programming</li>
+                    <li>Technology</li>
+                    <li>Music</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             PROJECTS WINDOW
+             ========================= -->
+
+        <div class="window" id="projects_window">
+
+            <div class="top_bar">
+
+                <div class="window_title">
+                    Projects
+                </div>
+
+                <div class="window_buttons">
+
+                    <button onclick="minimizeWindow('projects_window')">
+                        −
+                    </button>
+
+                    <button>
+                        □
+                    </button>
+
+                    <button onclick="closeWindow('projects_window')">
+                        ×
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="window_content">
+
+                <h1>My Projects</h1>
+
+
+                <!-- KRONOS -->
+
+                <div class="project">
+
+                    <h2>Kronos</h2>
+
+                    <p>
+                        A task management and reminder system
+                        designed to help organize tasks, deadlines,
+                        and scheduled reminders.
+                    </p>
+
+                    <button class="project_button">
+                        <a href="https://github.com/iamharry0121/Kronos " target="_blank" rel="noopener noreferrer">View Project</a>
+                    </button>
+
+                </div>
+
+
+                <!-- PROJECT KESSLER-X -->
+
+                <div class="project">
+
+                    <h2>Project Kessler-X</h2>
+
+                    <p>
+                        A web application that uses CelesTrak
+                        orbital data to analyze satellite
+                        trajectories and predict potential
+                        satellite collision risks.
+                    </p>
+
+                    <button class="project_button">
+                        <a href="https://github.com/iamharry0121/Project-Kessler-X " target="_blank" rel="noopener noreferrer">View Project</a>
+                    </button>
+
+                </div>
+
+
+                <!-- SERAPH -->
+
+                <div class="project">
+
+                    <h2>Seraph</h2>
+
+                    <p>
+                        An AI-powered grade analyzer that examines
+                        academic performance and provides insights
+                        into grades and trends.
+                    </p>
+
+                    <button class="project_button">
+                        <a href="https://github.com/iamharry0121/SERAPH" target="_blank" rel="noopener noreferrer">View Project</a>
+                    </button>
+
+                </div>
+
+
+            </div>
 
         </div>
 
@@ -44,4 +222,5 @@
     <script src="script.js"></script>
 
 </body>
+
 </html>
