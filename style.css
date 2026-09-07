@@ -76,6 +76,12 @@ body {
     left: 30px;
 }
 
+/* Third icon */
+.desktop_icon:nth-child(3) {
+    top: 230px;
+    left: 30px;
+}
+
 
 /* Icon image */
 
@@ -472,4 +478,358 @@ body {
     box-shadow:
         inset 1px 1px 2px
         rgba(0, 0, 0, 0.25);
+}
+
+/* =========================
+   SKILLS WINDOW
+   ========================= */
+
+.skills_window {
+    width: 700px;
+    height: 500px;
+}
+
+
+/* =========================
+   SKILLS CONTENT
+   ========================= */
+
+.skills_content {
+    position: relative;
+
+    width: 100%;
+    height: calc(100% - 42px);
+
+    overflow: hidden;
+
+    background: #e9edef;
+
+    color: #263640;
+}
+
+
+/* =========================
+   BOOT SCREEN
+   ========================= */
+
+#skills_boot {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #dfe5e8;
+
+    z-index: 3;
+}
+
+
+.boot_logo {
+    margin-bottom: 20px;
+
+    font-family: "VT323", monospace;
+
+    font-size: 42px;
+
+    letter-spacing: 3px;
+
+    color: #344b5a;
+
+    text-shadow:
+        1px 1px 0 white;
+}
+
+
+.boot_status {
+    margin-bottom: 12px;
+
+    font-family: "VT323", monospace;
+
+    font-size: 18px;
+
+    letter-spacing: 1px;
+
+    color: #506674;
+}
+
+
+.boot_bar {
+    width: 320px;
+    height: 14px;
+
+    padding: 2px;
+
+    background: #c3cdd2;
+
+    border: 2px solid #71818a;
+
+    box-shadow:
+        inset 1px 1px 0 #89969d,
+        inset -1px -1px 0 white;
+}
+
+
+#boot_progress {
+    width: 0%;
+    height: 100%;
+
+    background: #6c9fc2;
+
+    transition: width 0.05s linear;
+}
+
+
+#boot_message {
+    margin-top: 12px;
+
+    font-family: "VT323", monospace;
+
+    font-size: 16px;
+
+    color: #61727d;
+}
+
+
+/* =========================
+   CODE STREAM
+   ========================= */
+
+#skills_code {
+    position: absolute;
+
+    inset: 0;
+
+    display: none;
+
+    padding: 15px;
+
+    overflow: hidden;
+
+    background: #e4e9eb;
+
+    z-index: 2;
+}
+
+
+#code_output {
+    font-family: "VT323", monospace;
+
+    font-size: 16px;
+
+    line-height: 1.1;
+
+    color: #536d7a;
+
+    word-break: break-all;
+}
+
+
+/* =========================
+   SKILLS MAIN
+   ========================= */
+
+#skills_main {
+    position: absolute;
+
+    inset: 0;
+
+    display: none;
+
+    padding: 24px;
+
+    overflow-y: auto;
+
+    background: #edf0f2;
+}
+
+
+/* =========================
+   SKILLS HEADER
+   ========================= */
+
+.skills_header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    margin-bottom: 20px;
+
+    padding-bottom: 12px;
+
+    border-bottom: 2px solid #aebbc2;
+
+    box-shadow:
+        0 1px 0 white;
+}
+
+
+.system_label {
+    font-family: "VT323", monospace;
+
+    font-size: 15px;
+
+    letter-spacing: 2px;
+
+    color: #78909d;
+}
+
+
+.skills_header h1 {
+    margin: 2px 0 0;
+
+    font-family: "VT323", monospace;
+
+    font-size: 38px;
+
+    font-weight: 400;
+
+    letter-spacing: 2px;
+
+    color: #304754;
+}
+
+
+.system_status {
+    padding: 6px 10px;
+
+    font-family: "VT323", monospace;
+
+    font-size: 16px;
+
+    color: #4d7487;
+
+    background: #dce8ed;
+
+    border: 1px solid #9eb2bd;
+
+    box-shadow:
+        inset 1px 1px white,
+        inset -1px -1px #b2c0c7;
+}
+
+
+/* =========================
+   SKILL GRID
+   ========================= */
+
+.skill_grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 14px;
+}
+
+
+/* =========================
+   SKILL CARDS
+   ========================= */
+
+.skill_card {
+    background: #e2e7ea;
+
+    border: 2px solid #aab7be;
+
+    border-top-color: white;
+    border-left-color: white;
+
+    box-shadow:
+        1px 1px 0 #68777e;
+}
+
+
+.skill_card_header {
+    padding: 8px 10px;
+
+    font-family: "VT323", monospace;
+
+    font-size: 19px;
+
+    letter-spacing: 1px;
+
+    color: #344d5b;
+
+    background: linear-gradient(
+        to bottom,
+        #d8e8f1,
+        #b9d0df
+    );
+
+    border-bottom: 1px solid #91a6b2;
+}
+
+
+.skill_list {
+    padding: 10px;
+}
+
+
+.skill {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 6px 0;
+
+    font-size: 13px;
+
+    border-bottom: 1px solid #c4cdd1;
+}
+
+
+.skill:last-child {
+    border-bottom: none;
+}
+
+
+.skill_level {
+    font-family: "VT323", monospace;
+
+    font-size: 16px;
+
+    letter-spacing: 1px;
+
+    color: #648ba0;
+}
+
+
+.learning_item {
+    padding: 6px 0;
+
+    font-family: "VT323", monospace;
+
+    font-size: 17px;
+
+    color: #526b78;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.skills_footer {
+    margin-top: 18px;
+
+    padding-top: 8px;
+
+    font-family: "VT323", monospace;
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+
+    color: #83939c;
+
+    border-top: 1px solid #c0c9cd;
 }
