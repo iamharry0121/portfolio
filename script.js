@@ -343,7 +343,7 @@ function bootSkills() {
             if (output.children.length > 35) {
 
                 output.removeChild(
-                    output.
+                    output.firstChild
                 );
 
             }
