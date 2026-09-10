@@ -1,47 +1,49 @@
 # Harry's Portfolio
 
-A personal portfolio website made with **HTML, CSS, and JavaScript**.
+A personal portfolio website built with HTML, CSS and JavaScript
 
-The site uses a very **Y2K desktop aesthetic** instead of a normal portfolio layout. You can open different sections as windows, drag them around, and interact with the desktop icons.
+A very Y2K desktop theme was used in replacement of a traditional portfolio website. Different sections have been made into windows which can be moved around and interacted with like desktop windows.
 
 ## Features
 
-- **Windows 7/POM-2-inspired interface**
-- **Desktop icons**
-- **Draggable windows**
-- **Window layering**
-- **About Me section**
-- **Projects section**
-- **Skills section**
-- **Skills boot animation**
-- **Code-style loading animation**
-- **Responsive layout**
+• Windows 7/POM-2 inspired
+• Desktop icons
+• Draggable windows
+• Window overlay
+• About me
+• Projects
+• Skill
+• Skills boot animation
+• Code-style loading animation
+• Responsive
 
-## Technologies Used
 
-- `HTML`
-- `CSS`
-- `JavaScript`
-- `Git`
-- `GitHub Pages`
 
-## AI Usage
+## Built with
 
-I used **AI** during development mainly to help explain concepts, debug problems, and figure out different ways to implement things.
+• HTML
+• CSS
+• JavaScript
+• Git
+• GitHub Pages
 
-I still **wrote, modified, tested, and debugged the code myself**.
 
-## Project Structure
+
+## AI usage
+
+AI was used to a certain extent when developing this project to explain concepts, debug, and develop alternative solutions. However, the code was still written, edited, tested, and debugged by me.
+
+## Project structure
+
+
 
 ```text
+
 portfolio/
 ├── index.html
 ├── style.css
 ├── script.js
 ├── bg.jpg
 └── README.md
-```
 
-## Deployment
 
-The website is deployed using **GitHub Pages**.
