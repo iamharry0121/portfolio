@@ -9,7 +9,6 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
@@ -17,17 +16,13 @@
 
 <body>
 
-    <!-- =========================
-         DESKTOP
-         ========================= -->
+    <!-- the desktop -->
 
     <div id="desktop">
 
-        <!-- ABOUT ME ICON -->
+        <!-- about me -->
 
-        <div class="desktop_icon"
-             onclick="openWindow('about_window')">
-
+        <div class="desktop_icon" onclick="openWindow('about_window')">
             <div class="icon_image">
                 👤
             </div>
@@ -35,15 +30,11 @@
             <div class="icon_name">
                 About Me
             </div>
-
         </div>
 
+        <!-- projects -->
 
-        <!-- PROJECTS ICON -->
-
-        <div class="desktop_icon"
-             onclick="openWindow('projects_window')">
-
+        <div class="desktop_icon" onclick="openWindow('projects_window')">
             <div class="icon_image">
                 📁
             </div>
@@ -51,14 +42,11 @@
             <div class="icon_name">
                 Projects
             </div>
-
         </div>
 
-        <!-- SKILLS ICON -->
+        <!-- skills -->
 
-        <div class="desktop_icon"
-             onclick="openWindow('skills_window')">
-
+        <div class="desktop_icon" onclick="openWindow('skills_window')">
             <div class="icon_image">
                 🔧
             </div>
@@ -66,24 +54,19 @@
             <div class="icon_name">
                 Skills
             </div>
-
         </div>
 
 
-        <!-- =========================
-             ABOUT ME WINDOW
-             ========================= -->
+        <!-- about window -->
 
         <div class="window" id="about_window">
 
             <div class="top_bar">
-
                 <div class="window_title">
                     About Me
                 </div>
 
                 <div class="window_buttons">
-
                     <button onclick="minimizeWindow('about_window')">
                         −
                     </button>
@@ -95,11 +78,8 @@
                     <button onclick="closeWindow('about_window')">
                         ×
                     </button>
-
                 </div>
-
             </div>
-
 
             <div class="window_content">
 
@@ -133,9 +113,7 @@
         </div>
 
 
-        <!-- =========================
-             PROJECTS WINDOW
-             ========================= -->
+        <!-- projects window -->
 
         <div class="window" id="projects_window">
 
@@ -146,7 +124,6 @@
                 </div>
 
                 <div class="window_buttons">
-
                     <button onclick="minimizeWindow('projects_window')">
                         −
                     </button>
@@ -158,21 +135,17 @@
                     <button onclick="closeWindow('projects_window')">
                         ×
                     </button>
-
                 </div>
 
             </div>
-
 
             <div class="window_content">
 
                 <h1>My Projects</h1>
 
-
-                <!-- KRONOS -->
+                <!-- kronos -->
 
                 <div class="project">
-
                     <h2>Kronos</h2>
 
                     <p>
@@ -182,16 +155,16 @@
                     </p>
 
                     <button class="project_button">
-                        <a href="https://github.com/iamharry0121/Kronos " target="_blank" rel="noopener noreferrer">View Project</a>
+                        <a href="https://github.com/iamharry0121/Kronos" target="_blank" rel="noopener noreferrer">
+                            View Project
+                        </a>
                     </button>
-
                 </div>
 
 
-                <!-- PROJECT KESSLER-X -->
+                <!-- project kessler-x -->
 
                 <div class="project">
-
                     <h2>Project Kessler-X</h2>
 
                     <p>
@@ -202,16 +175,16 @@
                     </p>
 
                     <button class="project_button">
-                        <a href="https://github.com/iamharry0121/Project-Kessler-X " target="_blank" rel="noopener noreferrer">View Project</a>
+                        <a href="https://github.com/iamharry0121/Project-Kessler-X" target="_blank" rel="noopener noreferrer">
+                            View Project
+                        </a>
                     </button>
-
                 </div>
 
 
-                <!-- SERAPH -->
+                <!-- seraph -->
 
                 <div class="project">
-
                     <h2>Seraph</h2>
 
                     <p>
@@ -221,19 +194,18 @@
                     </p>
 
                     <button class="project_button">
-                        <a href="https://github.com/iamharry0121/SERAPH" target="_blank" rel="noopener noreferrer">View Project</a>
+                        <a href="https://github.com/iamharry0121/SERAPH" target="_blank" rel="noopener noreferrer">
+                            View Project
+                        </a>
                     </button>
-
                 </div>
-
 
             </div>
 
         </div>
 
-        <!-- =========================
-             SKILLS WINDOW
-             ========================= -->
+
+        <!-- skills window -->
 
         <div class="window skills_window" id="skills_window">
 
@@ -261,10 +233,9 @@
 
             </div>
 
-
             <div class="skills_content">
 
-                <!-- BOOT SCREEN -->
+                <!-- boot screen -->
 
                 <div id="skills_boot">
 
@@ -277,9 +248,7 @@
                     </div>
 
                     <div class="boot_bar">
-
                         <div id="boot_progress"></div>
-
                     </div>
 
                     <div id="boot_message">
@@ -289,16 +258,14 @@
                 </div>
 
 
-                <!-- CODE STREAM -->
+                <!-- fake code loading thing -->
 
                 <div id="skills_code">
-
                     <div id="code_output"></div>
-
                 </div>
 
 
-                <!-- ACTUAL SKILLS -->
+                <!-- actual skills -->
 
                 <div id="skills_main">
 
@@ -430,12 +397,7 @@
                         </div>
 
                     </div>
-
-
-                    <div class="skills_footer">
-                        SKILLS_DATABASE // VERSION 1.0 // STATUS: ACTIVE
-                    </div>
-
+                    
                 </div>
 
             </div>
@@ -443,7 +405,6 @@
         </div>
 
     </div>
-
 
     <script src="script.js"></script>
 
