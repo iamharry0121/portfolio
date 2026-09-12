@@ -92,6 +92,14 @@ body {
     overflow: hidden;
 }
 
+.window.maximized {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+}
+
 /* window top */
 
 .top_bar {

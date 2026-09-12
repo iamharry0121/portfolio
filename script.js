@@ -26,6 +26,29 @@ function minimizeWindow(element) {
     windowBox.style.display = "none"
 }
 
+function maximizeWindow(element) {
+    const windowBox = element.closest(".window")
+
+    windowBox.classList.toggle("maximized")
+
+    if (windowBox.classList.contains("maximized")) {
+        // remember where it was so we can restore it later
+        windowBox.dataset.prevTop = windowBox.style.top
+        windowBox.dataset.prevLeft = windowBox.style.left
+        windowBox.dataset.prevTransform = windowBox.style.transform
+
+        windowBox.style.top = ""
+        windowBox.style.left = ""
+        windowBox.style.transform = "none"
+
+        bringToFront(windowBox)
+    } else {
+        windowBox.style.top = windowBox.dataset.prevTop || ""
+        windowBox.style.left = windowBox.dataset.prevLeft || ""
+        windowBox.style.transform = windowBox.dataset.prevTransform || ""
+    }
+}
+
 function bringToFront(windowBox) {
     highestZIndex++
     windowBox.style.zIndex = highestZIndex
@@ -39,6 +62,11 @@ document.querySelectorAll(".top_bar")
 
             // don't drag the window if i'm clicking one of the buttons
             if (event.target.closest(".window_buttons")) {
+                return
+            }
+
+            // don't drag a maximized window
+            if (windowBox.classList.contains("maximized")) {
                 return
             }
 
