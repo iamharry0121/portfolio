@@ -2,7 +2,7 @@
 
 A personal portfolio website built with HTML, CSS and JavaScript
 
-A very Y2K desktop theme was used in replacement of a traditional portfolio website. Different sections have been made into windows which can be moved around and interacted with like desktop windows.
+A very windows 7ish desktop theme was used in replacement of a traditional portfolio website. Different sections have been made into windows which can be moved around and interacted with like desktop windows.
 
 ## Features
 
@@ -13,9 +13,6 @@ A very Y2K desktop theme was used in replacement of a traditional portfolio webs
 • About me
 • Projects
 • Skill
-• Skills boot animation
-• Code-style loading animation
-• Responsive
 
 
 
